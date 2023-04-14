@@ -1,0 +1,306 @@
+@media screen and (max-width: 1190px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .steps__list {
+        max-width: 350px;
+    }
+
+    .steps__pics-interrior {
+        max-width: 231px;
+        height: 388px;
+    }
+
+    .about__item:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    .order .form__input {
+        max-width: 250px;
+    }
+
+    .footer {
+        &__contacts--item {
+          list-style-type: none;
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      
+        &__contacts--link {
+          font-size: 14px;
+        }
+      }
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .header {
+        .visible {
+            display: block;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background-color: $wood;
+            width: 100%;
+            height: 390px;
+            padding-top: 80px;
+        }
+
+        &__burger {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 35px;
+            height: 22px;
+            cursor: pointer;
+    
+            span,
+            &::before,
+            &::after {
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                background-color: $wood;
+            }
+    
+            &::before,
+            &::after {
+                content: "";
+            }
+    
+            &::before {
+                top: 0;
+            }
+    
+            &::after {
+                bottom: 0;
+            }
+    
+            span {
+                top: 50%;
+                transform: scale(1) translate(0px, -50%);
+            }
+        }
+
+        .touched {
+            span {
+                transform: scale(0) translate(0px, -50%);
+            }
+
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
+        }
+
+        &__logo {
+            &--img {
+              width: 150px;
+              height: auto;
+            }
+          }
+        
+
+        &__menu {
+            display: none;
+            &--list {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .active {
+                color: $black;
+            }
+
+            &--item {
+                text-align: center;
+                margin: 20px 0px;
+
+                &:not(:last-child) {
+                    margin-right: 0px;
+                }
+            }
+
+
+            &--tel {
+                color: $creemy;
+                font-weight: 600;
+                font-size: 24px; 
+            }
+        }
+    }
+
+    .header__menu--link {
+        color: $creemy;
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        max-width: 320px;
+        padding: 0 20px;
+        overflow-x: hidden;
+    }
+
+    .header__logo {
+        font-size: 16px;
+    }
+
+    .main {
+        background: url(../img/main-bg-mb.jpg) no-repeat center/cover;
+
+        &__container {
+          padding-top: 90px;
+          padding-bottom: 120px;
+        }
+
+        &__wrapper {
+            position: relative; 
+            overflow: hidden;
+            background-color: #96918d8c;
+            padding: 10px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0; 
+                left: 0; 
+                right: 0;
+                bottom: 0; 
+                box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5); 
+                filter: blur(10px); 
+                z-index: 1;
+            }
+        }
+        
+        &__title {
+          max-width: 238px;
+          font-size: 26px;
+          line-height: 30px;
+          margin: 0 auto 20px;
+        }
+      
+        &__text {
+            max-width: 238px;
+            font-size: 17px;
+            line-height: 24px;
+            margin: 0 auto 20px;
+        }
+
+        &__list {
+            margin-bottom: 30px;
+        }
+      
+        &__btns {
+            flex-direction: column;
+            max-width: 300px;
+            margin-bottom: 0px;
+            position: relative;
+            z-index: 9999;
+          
+          &--item {
+            width: 300px;
+
+            &:not(:last-child){
+                margin-bottom: 20px;      
+            }
+          }
+        }
+    }
+
+    .slider {
+        &__container {
+            padding-top: 30px;
+            padding-bottom: 50px;
+            height: 100%;
+        }
+
+        &__title {
+            font-size: 22px;
+            margin-bottom: 10px;
+
+        }
+
+        .swiper {
+            overflow-x: hidden;
+        }
+    }
+
+    .steps {
+        padding-bottom: 40px;
+        &__pics {
+            display: none;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__list {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .about {
+        padding: 50px;
+       &__list {
+        flex-direction: column;
+       }
+
+       &__item {
+        margin-bottom: 10px;
+       }
+     
+    }
+
+
+    .order {
+        padding-top: 50px;
+        padding-bottom: 80px;
+        .form {
+            display: flex;
+            flex-direction: column;
+
+            &__input {
+                max-width: 288px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+        
+
+    .footer {
+        &__container {
+            height: 150px;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        &__copyright{
+            font-size: 10px;
+        }
+
+        &__contacts--list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__contacts--item {
+            margin-bottom: 15px;
+        }
+    }
+
+}
